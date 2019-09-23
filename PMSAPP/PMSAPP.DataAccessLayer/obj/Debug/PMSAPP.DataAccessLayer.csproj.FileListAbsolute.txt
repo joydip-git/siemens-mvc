@@ -1,0 +1,11 @@
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\bin\Debug\PMSAPP.DataAccessLayer.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\bin\Debug\PMSAPP.DataAccessLayer.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\bin\Debug\PMSAPP.Entities.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\bin\Debug\PMSAPP.Repository.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\bin\Debug\PMSAPP.Entities.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\bin\Debug\PMSAPP.Repository.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\obj\Debug\PMSAPP.DataAccessLayer.csprojAssemblyReference.cache
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\obj\Debug\PMSAPP.DataAccessLayer.csproj.CoreCompileInputs.cache
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\obj\Debug\PMSAPP.DataAccessLayer.csproj.CopyComplete
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\obj\Debug\PMSAPP.DataAccessLayer.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\obj\Debug\PMSAPP.DataAccessLayer.pdb
