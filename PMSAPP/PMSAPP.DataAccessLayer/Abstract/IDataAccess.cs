@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PMSAPP.DataAccessLayer
+namespace PMSAPP.DataAccessLayer.Abstract
 {
     public interface IDataAccess<T> where T : class
     {
