@@ -1,58 +1,115 @@
-﻿
+﻿@model PMSAPP.Entities.Product
 @{
     ViewBag.Title = "AddProduct";
 }
 
+@*
+    <fieldset>
+        <legend>Enter Product Details:</legend>
+        <form method="post">
+            <table>
+                <tr>
+                    <td>
+                        Enter Name:
+                    </td>
+                    <td>
+                        <input type="text" name="ProductName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Enter Id:
+                    </td>
+                    <td>
+                        <input type="text" name="ProductId" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Enter Price:
+                    </td>
+                    <td>
+                        <input type="text" name="Price" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Enter Description:
+                    </td>
+                    <td>
+                        <input type="text" name="Description" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Enter CategoyId:
+                    </td>
+                    <td>
+                        <input type="text" name="CategoryId" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center">
+                        <br/>
+                        <input type="submit" name="btnAdd" value="Add Product"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+*@
+
 <fieldset>
-    <legend>Enter Product Details:</legend>
-    <form>
+    <legend> Enter Product Details: </legend>
+    @using (this.Html.BeginForm())
+    {
         <table>
             <tr>
                 <td>
-                    Enter Name:
+                   @Html.LabelFor(p=>p.ProductName)
                 </td>
                 <td>
-                    <input type="text" name="ProductName" />
+                    @this.Html.TextBoxFor(p=>p.ProductName)
                 </td>
             </tr>
             <tr>
                 <td>
-                    Enter Id:
+                    @Html.LabelFor(p => p.ProductId)
                 </td>
                 <td>
-                    <input type="text" name="ProductId" />
+                    @this.Html.TextBoxFor(p => p.ProductId)
                 </td>
             </tr>
             <tr>
                 <td>
-                    Enter Price:
+                    @Html.LabelFor(p => p.Price)
                 </td>
                 <td>
-                    <input type="text" name="Price" />
+                    @this.Html.TextBoxFor(p => p.Price)
                 </td>
             </tr>
             <tr>
                 <td>
-                    Enter Description:
+                    @Html.LabelFor(p => p.Description)
                 </td>
                 <td>
-                    <input type="text" name="Description" />
+                    @this.Html.TextBoxFor(p => p.Description)
                 </td>
             </tr>
             <tr>
                 <td>
-                    Enter CategoyId:
+                    @Html.LabelFor(p => p.CategoryId)
                 </td>
                 <td>
-                    <input type="text" name="CategoryId" />
+                    @this.Html.TextBoxFor(p => p.CategoryId)
                 </td>
             </tr>
-            <tr>                
+            <tr>
                 <td colspan="2" style="text-align:center">
-                    <input type="button" name="btnAdd" />
+                    <br />
+                    <input type="submit" name="btnAdd" value="Add Product" />
                 </td>
             </tr>
         </table>
-    </form>
+    }
 </fieldset>
-

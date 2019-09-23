@@ -1,0 +1,22 @@
+﻿@model PMSAPP.Entities.Product
+
+@{
+    ViewBag.Title = "GetProduct";
+}
+
+<h2>Product Data: </h2>
+@*@foreach (var item in this.ViewData.Keys)
+{
+    <span>@item</span>
+}*@
+<table>
+    <tr>
+        <td>
+            @Html.LabelFor(p => p.ProductName)
+        </td>
+        <td>
+            <span>@this.Model.ProductName</span>
+        </td>
+    </tr>
+</table>
+
