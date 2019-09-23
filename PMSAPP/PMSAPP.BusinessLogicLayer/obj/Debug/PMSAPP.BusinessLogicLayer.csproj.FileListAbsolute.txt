@@ -3,3 +3,11 @@ E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\PM
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\obj\Debug\PMSAPP.BusinessLogicLayer.csproj.CoreCompileInputs.cache
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\obj\Debug\PMSAPP.BusinessLogicLayer.dll
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\obj\Debug\PMSAPP.BusinessLogicLayer.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\PMSAPP.DataAccessLayer.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\PMSAPP.Entities.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\PMSAPP.Repository.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\PMSAPP.DataAccessLayer.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\PMSAPP.Entities.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\PMSAPP.Repository.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\obj\Debug\PMSAPP.BusinessLogicLayer.csprojAssemblyReference.cache
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\obj\Debug\PMSAPP.BusinessLogicLayer.csproj.CopyComplete

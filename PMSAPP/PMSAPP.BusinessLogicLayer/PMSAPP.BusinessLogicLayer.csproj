@@ -42,10 +42,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IBusinessComponent.cs" />
+    <Compile Include="Implementation\ProductBusinessComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Implementation\" />
+    <ProjectReference Include="..\PMSAPP.DataAccessLayer\PMSAPP.DataAccessLayer.csproj">
+      <Project>{d2e05990-52e1-4837-8107-8c4c05e6457f}</Project>
+      <Name>PMSAPP.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMSAPP.Entities\PMSAPP.Entities.csproj">
+      <Project>{4beb10f9-1bbc-4bf4-baf8-15c6c7bff0db}</Project>
+      <Name>PMSAPP.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
