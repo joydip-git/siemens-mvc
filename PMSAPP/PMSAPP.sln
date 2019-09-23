@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSAPP.Repository", "PMSAPP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSAPP.DataAccessLayer", "PMSAPP.DataAccessLayer\PMSAPP.DataAccessLayer.csproj", "{D2E05990-52E1-4837-8107-8C4C05E6457F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSAPP.BusinessLogicLayer", "PMSAPP.BusinessLogicLayer\PMSAPP.BusinessLogicLayer.csproj", "{7FEA4135-3EB2-4AB8-8B42-FF7A58BD20E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D2E05990-52E1-4837-8107-8C4C05E6457F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2E05990-52E1-4837-8107-8C4C05E6457F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2E05990-52E1-4837-8107-8C4C05E6457F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FEA4135-3EB2-4AB8-8B42-FF7A58BD20E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FEA4135-3EB2-4AB8-8B42-FF7A58BD20E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FEA4135-3EB2-4AB8-8B42-FF7A58BD20E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FEA4135-3EB2-4AB8-8B42-FF7A58BD20E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

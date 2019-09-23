@@ -1,0 +1,5 @@
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\PMSAPP.BusinessLogicLayer.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\PMSAPP.BusinessLogicLayer.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\obj\Debug\PMSAPP.BusinessLogicLayer.csproj.CoreCompileInputs.cache
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\obj\Debug\PMSAPP.BusinessLogicLayer.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\obj\Debug\PMSAPP.BusinessLogicLayer.pdb
