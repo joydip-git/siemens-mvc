@@ -1,5 +1,7 @@
 ﻿@using PMSAPP.Entities
 @using System.Collections.Generic
+@*@model IEnumerable<Product>*@
+@model PMSAPP.UserInterface.Models.ShowProductsViewModel
 @{
     ViewBag.Title = "ShowProducts";
 }
@@ -9,30 +11,68 @@
 @*<span>@this.ViewBag.Data</span>*@
 @*<span>@this.ViewData["Data"]</span>*@
 
-@{
-    var products = this.ViewData["Data"] as IEnumerable<Product>;
+@*{
+        var products = this.ViewData["Data"] as IEnumerable<Product>;
+    }*@
+
+
+
+@using (this.Html.BeginForm("ShowProducts", "Products", FormMethod.Post, htmlAttributes: new { @class = "form-group" }))
+{
+    <div class="container">
+        <div style="float:left">
+            @*<span>Product Name: &nbsp; &nbsp;</span>
+                <input type="text" name="productName" id="txtProductName" value="" class="form-control" /> &nbsp;&nbsp;*@
+            @this.Html.LabelFor(vm => vm.SearchText)
+            &nbsp;&nbsp;
+            @this.Html.TextBoxFor(vm => vm.SearchText)
+        </div>
+        <div style="float:right">
+            <input type="submit" name="btnSearch" id="btnSearch" value="Search" class="btn btn-primary" />
+        </div>
+    </div>
 }
 
-<table class="table-responsive">
-    <thead style="background-color:burlywood">
-        <tr>
-            <td>Name</td>
-            <td>Id</td>
-            <td>Price</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in products)
+@{
+    //IEnumerable<Product> products = null;
+    if (this.Model != null)
+    {
+        //products = this.Model;
+        var viewModel = this.Model;
+        @*<span>@products.Count() records found</span>*@
+        if (viewModel.Products != null && viewModel.Products.Count() > 0)
         {
-            <tr>
-                <td>@item.ProductName</td>
-                <td>@item.ProductId</td>
-                <td>@item.Price</td>
-                <td>@item.Description</td>
-            </tr>
+            <span>@viewModel.Products.Count() records found</span>
+            <br />
+            <div class="table-responsive">
+                <table class="table">
+                    <thead style="background-color:burlywood">
+                        <tr>
+                            <td>Name</td>
+                            <td>Id</td>
+                            <td>Price</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in viewModel.Products)
+                        {
+                            <tr>
+                                <td>@item.ProductName</td>
+                                <td>@item.ProductId</td>
+                                <td>@item.Price</td>
+                                <td>@item.Description</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
         }
-    </tbody>
-</table>
+        else
+        {
+            <span>No products found</span>
+        }
+    }
+}
 
 

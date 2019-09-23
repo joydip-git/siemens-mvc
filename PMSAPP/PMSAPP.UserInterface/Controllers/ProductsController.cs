@@ -16,11 +16,35 @@ namespace PMSAPP.UserInterface.Controllers
             return View();
         }
 
+        [HttpGet]
         public ViewResult ShowProducts()
         {
-            //this.ViewBag.Data = "all products";
-            this.ViewData["Data"] = new DataFetcher().GetAllRecords();
             return this.View();
+        }
+        [HttpPost]
+        //public ViewResult ShowProducts(string productName)
+        public ViewResult ShowProducts(ShowProductsViewModel vm)
+        {
+            IEnumerable<Product> products = null;
+            if (vm.SearchText != null)
+            {
+                products = new DataFetcher()
+                    .GetAllRecords()
+                    .Where(p => p.ProductName.Contains(vm.SearchText));
+            }
+
+            if (products != null && products.Count() > 0)
+            {
+                //this.ViewBag.Count = products.Count();
+                //return this.View(products);
+                vm.Products = products;
+                return this.View(vm);
+            }
+            else
+            {
+                //this.ViewBag.ErrorMessage = "No products found";
+                return this.View(vm);
+            }
         }
         [HttpGet]
         public ViewResult AddProduct()

@@ -116,6 +116,7 @@
     </Compile>
     <Compile Include="Models\DataFetcher.cs" />
     <Compile Include="Models\IDataFetcher.cs" />
+    <Compile Include="Models\ShowProductsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
