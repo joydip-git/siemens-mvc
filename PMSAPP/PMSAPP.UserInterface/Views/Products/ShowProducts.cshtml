@@ -1,0 +1,38 @@
+﻿@using PMSAPP.Entities
+@using System.Collections.Generic
+@{
+    ViewBag.Title = "ShowProducts";
+}
+
+<h2>Show All Products</h2>
+
+@*<span>@this.ViewBag.Data</span>*@
+@*<span>@this.ViewData["Data"]</span>*@
+
+@{
+    var products = this.ViewData["Data"] as IEnumerable<Product>;
+}
+
+<table class="table-responsive">
+    <thead style="background-color:burlywood">
+        <tr>
+            <td>Name</td>
+            <td>Id</td>
+            <td>Price</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in products)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.ProductId</td>
+                <td>@item.Price</td>
+                <td>@item.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PMSAPP.UserInterface.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,9 +15,15 @@ namespace PMSAPP.UserInterface.Controllers
             return View();
         }
 
-        public string ShowProducts()
+        public ViewResult ShowProducts()
         {
-            return "all products";
+            //this.ViewBag.Data = "all products";
+            this.ViewData["Data"] = new DataFetcher().GetAllRecords();
+            return this.View();
+        }
+        public ViewResult AddProduct()
+        {
+            return this.View();
         }
     }
 }
