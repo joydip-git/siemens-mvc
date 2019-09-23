@@ -41,7 +41,7 @@ namespace PMSAPP.Entities
                     return true;
                 }
                 else
-                    throw new ArgumentException($"argument of type {obj.GetType().Name} has been passed to Equals method insteda of {this.GetType().Name}");
+                    throw new ArgumentException($"argument of type {obj.GetType().Name} has been passed to Equals method instead of {this.GetType().Name}");
             }
             else
                 throw new NullReferenceException($"null reference has been sent to Equals method");

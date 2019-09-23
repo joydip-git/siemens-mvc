@@ -68,7 +68,7 @@ namespace PMSAPP.Entities
                     return true;
                 }
                 else
-                    throw new ArgumentException($"argument of type {obj.GetType().Name} has been passed to Equals method insteda of {this.GetType().Name}");
+                    throw new ArgumentException($"argument of type {obj.GetType().Name} has been passed to Equals method instead of {this.GetType().Name}");
             }
             else
                 throw new NullReferenceException($"null reference has been sent to Equals method");
@@ -76,7 +76,13 @@ namespace PMSAPP.Entities
 
         public override int GetHashCode()
         {
-            return 0;
+            const int prime = 23;
+            int hash = 0;
+            hash = this.ProductId.GetHashCode() * prime;
+            hash = this.ProductName != null ? this.ProductName.GetHashCode() * hash : hash * prime;
+            hash = this.Description != null ? this.Description.GetHashCode() * hash : hash * prime;
+            hash = this.Price.GetHashCode() * hash;
+            return hash;
         }
     }
 }
