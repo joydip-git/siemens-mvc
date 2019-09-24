@@ -11,7 +11,7 @@ namespace ValidationPractice.Models
     [ClientValidation]
     public class Appointment
     {
-        [Required(ErrorMessage = "please enter name")]
+        [Required]
         //[Compare()]
         //[RegularExpression()]
         //[StringLength(10)]
@@ -20,10 +20,12 @@ namespace ValidationPractice.Models
         [DataType(DataType.Date)]
         //[Required(ErrorMessage = "Please Enter a date")]
         [FutureDate(ErrorMessage = "please enter a date in the future")]
+        //[Required(ErrorMessage = "please enter date")]
         public DateTime Date { get; set; }
 
         //[Range(typeof(bool), "true", "true", ErrorMessage = "You must accept the terms & conditions")]
         [MustBeTrue(ErrorMessage = "You must accept the terms & conditions")]
+        //[Required(ErrorMessage ="select the checkbox")]
         public bool TermsAccepted { get; set; }
     }
 
