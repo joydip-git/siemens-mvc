@@ -10,10 +10,10 @@ namespace PMSAPP.UserInterface.Models
 {
     public class DataFetcher : IDataFetcher<Product>
     {
-        private IBusinessComponent<Product> businessComponent;
-        public DataFetcher()
+        private readonly IBusinessComponent<Product> businessComponent;
+        public DataFetcher(IBusinessComponent<Product> businessComponent)
         {
-            businessComponent = new ProductBusinessComponent();
+            this.businessComponent = businessComponent;
         }
         public int AddData(Product data)
         {

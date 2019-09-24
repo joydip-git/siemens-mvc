@@ -10,6 +10,11 @@ namespace PMSAPP.UserInterface.Controllers
 {
     public class ProductsController : Controller
     {
+        private readonly IDataFetcher<Product> dataFetcher;
+        public ProductsController(IDataFetcher<Product> dataFetcher)
+        {
+            this.dataFetcher = dataFetcher;
+        }
         // GET: Products
         public ActionResult Index()
         {
@@ -28,7 +33,7 @@ namespace PMSAPP.UserInterface.Controllers
             IEnumerable<Product> products = null;
             if (vm.SearchText != null)
             {
-                products = new DataFetcher()
+                products = dataFetcher
                     .GetAllRecords()
                     .Where(p => p.ProductName.Contains(vm.SearchText));
             }

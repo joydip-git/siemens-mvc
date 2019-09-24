@@ -75,3 +75,10 @@ E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\PMSAPP.Reposi
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\PMSAPP.BusinessLogicLayer.pdb
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\PMSAPP.DataAccessLayer.pdb
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\PMSAPP.Repository.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\Unity.Abstractions.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\Unity.Container.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\Unity.Mvc5.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\Unity.Abstractions.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\Unity.Container.pdb

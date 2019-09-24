@@ -9,11 +9,11 @@ namespace PMSAPP.BusinessLogicLayer.Implementation
 {
     public class ProductBusinessComponent : IBusinessComponent<Product>
     {
-        private IDataAccess<Product> dataAccessObject;
+        private readonly IDataAccess<Product> dataAccessObject;
 
-        public ProductBusinessComponent()
+        public ProductBusinessComponent(IDataAccess<Product> dataAccessObject)
         {
-            dataAccessObject = new ProductDataAccessComponent();
+            this.dataAccessObject = dataAccessObject;
         }
         public int Add(Product data)
         {
