@@ -18,6 +18,10 @@ namespace ValidationPractice.Controllers
         [HttpPost]
         public ActionResult MakeBooking(Appointment appointment)
         {
+            /*
+            if (ModelState.IsValid)
+                ViewBag.Message = ModelState.IsValid;
+
             if (string.IsNullOrEmpty(appointment.ClientName))
             {
                 this.ModelState.AddModelError(nameof(appointment.ClientName), "Please enter your name");
@@ -30,7 +34,7 @@ namespace ValidationPractice.Controllers
             {
                 ModelState.AddModelError(nameof(appointment.TermsAccepted), "You must accept the terms");
             }
-
+            */
             if (ModelState.IsValid)
                 return View("Completed", appointment);
             else

@@ -2,33 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+
 using System.ComponentModel.DataAnnotations;
-using ValidationPractice.Infrastucture;
 
 namespace ValidationPractice.Models
 {
-
-    [ClientValidation]
-    public class Appointment
-    {
-        [Required(ErrorMessage = "please enter name")]
-        //[Compare()]
-        //[RegularExpression()]
-        //[StringLength(10)]
-        public string ClientName { get; set; }
-
-        [DataType(DataType.Date)]
-        //[Required(ErrorMessage = "Please Enter a date")]
-        [FutureDate(ErrorMessage = "please enter a date in the future")]
-        public DateTime Date { get; set; }
-
-        //[Range(typeof(bool), "true", "true", ErrorMessage = "You must accept the terms & conditions")]
-        [MustBeTrue(ErrorMessage = "You must accept the terms & conditions")]
-        public bool TermsAccepted { get; set; }
-    }
-
-    /*
-    public class Appointment : IValidatableObject
+    public class Appointment_Copy : IValidatableObject
     {
         public string ClientName { get; set; }
         [DataType(DataType.Date)]
@@ -53,7 +32,5 @@ namespace ValidationPractice.Models
 
             return errors;
         }
-        
     }
-    */
 }
