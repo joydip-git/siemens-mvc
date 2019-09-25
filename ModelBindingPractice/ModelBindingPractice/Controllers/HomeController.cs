@@ -39,7 +39,7 @@ namespace ModelBindingPractice.Controllers
             return this.View("Index", model);
         }
         public ActionResult AddressSummaryView(
-            [Bind(Prefix ="HomeAddress", Exclude ="Country,City")]AddressSummary summary)
+            [Bind(Prefix = "HomeAddress", Exclude = "Country,City")]AddressSummary summary)
         {
             return View(summary);
         }
@@ -67,10 +67,32 @@ namespace ModelBindingPractice.Controllers
         //    this.UpdateModel<IList<AddressSummary>>(addresses, new FormValueProvider(this.ControllerContext));
         //    return View(addresses);
         //}
-        public ActionResult Addresses(FormCollection formCollection)
+        //public ActionResult Addresses(FormCollection formCollection)
+        //{
+        //    IList<AddressSummary> addresses = new List<AddressSummary>();
+        //    //try
+        //    //{
+        //    //    this.UpdateModel<IList<AddressSummary>>(
+        //    //        addresses, formCollection);
+        //    //}
+        //    //catch (InvalidOperationException ex)
+        //    //{
+        //    //    this.ViewBag.Error = ex.ToString();
+        //    //}
+        //    if (this.TryUpdateModel(addresses, formCollection))
+        //    {
+        //        this.ViewBag.Data = "";
+        //    }
+        //    else
+        //    {
+        //        this.ViewBag.Error = "";
+        //    }
+        //    return View(addresses);
+        //}
+        public ActionResult Addresses()
         {
             IList<AddressSummary> addresses = new List<AddressSummary>();
-            this.UpdateModel<IList<AddressSummary>>(addresses, formCollection);
+            this.TryUpdateModel(addresses);
             return View(addresses);
         }
     }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using ModelBindingPractice.Infrastructure;
 
 namespace ModelBindingPractice
 {
@@ -13,6 +14,7 @@ namespace ModelBindingPractice
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            ValueProviderFactories.Factories.Insert(0, new AddressSummaryValueProviderFactory());
         }
     }
 }
