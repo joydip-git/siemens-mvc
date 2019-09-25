@@ -1,0 +1,19 @@
+﻿@model ModelBindingPractice.Models.Employee
+
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Show</h2>
+<p>
+    @Html.LabelFor(e => e.Id)
+    @Html.TextBoxFor(e=>e.Id)
+</p>
+<p>
+    @Html.LabelFor(e => e.FullName)
+    @Html.TextBoxFor(e => e.FullName)
+</p>
+<p>
+    @Html.LabelFor(e => e.Address)
+    @Html.TextBoxFor(e => e.Address)
+</p>

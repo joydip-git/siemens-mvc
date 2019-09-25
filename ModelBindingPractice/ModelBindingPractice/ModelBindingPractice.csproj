@@ -112,10 +112,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\AddressSummaryModelBinder.cs" />
     <Compile Include="Infrastructure\AddressSummaryValueProviderFactory.cs" />
     <Compile Include="Infrastructure\AddressValueProvider.cs" />
+    <Compile Include="Infrastructure\EmployeeModelBinder.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AddressSummary.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -139,6 +142,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\CreatePerson.cshtml" />
     <Content Include="Views\Home\AddressSummaryView.cshtml" />
+    <Content Include="Views\Home\Show.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

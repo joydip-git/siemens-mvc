@@ -61,12 +61,16 @@ namespace ModelBindingPractice.Controllers
         //    addresses = addresses ?? new List<AddressSummary>();
         //    return View(addresses);
         //}
+
+        //manually invoking model binder and passing value provider of my choice (or not)
         //public ActionResult Addresses()
         //{           
         //    IList<AddressSummary> addresses = new List<AddressSummary>();
         //    this.UpdateModel<IList<AddressSummary>>(addresses, new FormValueProvider(this.ControllerContext));
         //    return View(addresses);
         //}
+
+        //FormCollection itself is a value provider, so don't create one by yourself, rather use this collection 
         //public ActionResult Addresses(FormCollection formCollection)
         //{
         //    IList<AddressSummary> addresses = new List<AddressSummary>();
@@ -89,11 +93,24 @@ namespace ModelBindingPractice.Controllers
         //    }
         //    return View(addresses);
         //}
+
+        //custom value provider with custom model binder (optional)
         public ActionResult Addresses()
         {
             IList<AddressSummary> addresses = new List<AddressSummary>();
             this.TryUpdateModel(addresses);
             return View(addresses);
+        }
+
+        //Just ModelBinder (Employee)
+        public ActionResult Create()
+        {
+            return this.View();
+        }
+        [HttpPost]
+        public ActionResult Create(Employee employee)
+        {
+            return this.View("Show", employee);
         }
     }
 }

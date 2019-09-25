@@ -1,0 +1,29 @@
+﻿@model ModelBindingPractice.Models.Employee
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(e => e.Id)
+        @Html.TextBoxFor(e => e.Id)
+    </p>
+    <p>
+        @Html.Label("FirstName")
+        @Html.TextBox("FirstName")
+    </p>
+    <p>
+        @Html.Label("LastName")
+        @Html.TextBox("LastName")
+    </p>
+    <p>
+        @Html.LabelFor(e => e.Address)
+        @Html.TextBoxFor(e => e.Address)
+    </p>
+    <input type="submit" name="submit" value="Save" />
+}
+
