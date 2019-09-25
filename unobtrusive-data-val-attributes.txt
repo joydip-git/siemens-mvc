@@ -1,0 +1,28 @@
+compare	
+<input type="" data-val-equalto="error-message" data-val-equalto-other="name of other field">
+
+creditcard
+data-val-creditcard="errormessage"
+
+emailaddress
+data-val-email="error message"
+
+maxlength
+data-val-maxlength="em"
+data-val-maxlength-max="max-length"
+
+range
+data-val-range="em"
+data-val-range-max="max"
+data-val-range-min="min"
+
+required
+data-val-required="em"
+
+regularexpression
+data-val-regex=""
+data-val-regex-pattern="pattern"
+
+stringlength
+data-val-length="em"
+data-val-length-max="max-length"

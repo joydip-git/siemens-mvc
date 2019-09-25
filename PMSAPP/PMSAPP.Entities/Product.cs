@@ -1,14 +1,24 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace PMSAPP.Entities
 {
     public class Product
     {
+        [Required(ErrorMessage ="please enter product id")]
         public int ProductId { get; set; }
+
+        [Required(ErrorMessage = "please enter product name")]
         public string ProductName { get; set; }
+
+        [Required(ErrorMessage = "please enter product description")]
         public string Description { get; set; }
+
+        [Required(ErrorMessage = "please enter product price")]
         public decimal Price { get; set; }
+
         //foreign key column
+        [Required(ErrorMessage = "please enter category id")]
         public int CategoryId { get; set; }
         //navigation property
         public Category CategoryInfo { get; set; }

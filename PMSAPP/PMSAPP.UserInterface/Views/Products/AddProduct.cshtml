@@ -63,13 +63,14 @@
     <legend> Enter Product Details: </legend>
     @using (this.Html.BeginForm())
     {
+        Html.ValidationSummary(true, "", htmlAttributes: new { @class = "text-danger" });
         <table>
             <tr>
                 <td>
                    @Html.LabelFor(p=>p.ProductName)
                 </td>
                 <td>
-                    @this.Html.TextBoxFor(p=>p.ProductName)
+                    @this.Html.EditorFor(p=>p.ProductName)
                 </td>
             </tr>
             <tr>
@@ -77,7 +78,7 @@
                     @Html.LabelFor(p => p.ProductId)
                 </td>
                 <td>
-                    @this.Html.TextBoxFor(p => p.ProductId)
+                    @this.Html.EditorFor(p => p.ProductId)
                 </td>
             </tr>
             <tr>
@@ -85,7 +86,7 @@
                     @Html.LabelFor(p => p.Price)
                 </td>
                 <td>
-                    @this.Html.TextBoxFor(p => p.Price)
+                    @this.Html.EditorFor(p => p.Price)
                 </td>
             </tr>
             <tr>
@@ -93,7 +94,7 @@
                     @Html.LabelFor(p => p.Description)
                 </td>
                 <td>
-                    @this.Html.TextBoxFor(p => p.Description)
+                    @this.Html.EditorFor(p => p.Description)
                 </td>
             </tr>
             <tr>
@@ -101,7 +102,7 @@
                     @Html.LabelFor(p => p.CategoryId)
                 </td>
                 <td>
-                    @this.Html.TextBoxFor(p => p.CategoryId)
+                    @this.Html.EditorFor(p => p.CategoryId)
                 </td>
             </tr>
             <tr>
