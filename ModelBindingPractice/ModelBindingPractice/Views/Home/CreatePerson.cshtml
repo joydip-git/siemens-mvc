@@ -1,0 +1,36 @@
+﻿@model ModelBindingPractice.Models.Person
+
+@{
+    ViewBag.Title = "Create Person";
+}
+
+<h2>Create a Person</h2>
+@using (Html.BeginForm("AddressSummaryView", "Home"))
+{
+    <div>
+        @Html.LabelFor(p => p.PersonId)
+        @Html.EditorFor(p => p.PersonId)
+    </div>
+    <div>
+        @Html.LabelFor(p => p.FirstName)
+        @Html.EditorFor(p => p.FirstName)
+    </div>
+    <div>
+        @Html.LabelFor(p => p.LastName)
+        @Html.EditorFor(p => p.LastName)
+    </div>
+    <div>
+        @Html.LabelFor(p => p.Role)
+        @Html.EditorFor(p => p.Role)
+    </div>
+    <div>
+        @Html.LabelFor(p => p.HomeAddress.City)
+        @Html.EditorFor(p => p.HomeAddress.City)
+    </div>
+    <div>
+        @Html.LabelFor(p => p.HomeAddress.Country)
+        @Html.EditorFor(p => p.HomeAddress.Country)
+    </div>
+    <input type="submit" name="btnAdd" value="Submit" />
+}
+

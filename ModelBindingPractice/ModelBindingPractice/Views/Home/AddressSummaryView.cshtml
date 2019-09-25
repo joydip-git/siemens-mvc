@@ -1,0 +1,19 @@
+﻿@model ModelBindingPractice.Models.AddressSummary
+
+@{
+    ViewBag.Title = "AddressSummaryView";
+}
+
+<h2>Address Summary View</h2>
+@if (Model != null)
+{
+    <div>
+        <label>City:</label>
+        @Html.DisplayFor(summary => summary.City)
+    </div>
+    <div>
+        <label>Country:</label>
+        @Html.DisplayFor(summary => summary.Country)
+    </div>
+}
+

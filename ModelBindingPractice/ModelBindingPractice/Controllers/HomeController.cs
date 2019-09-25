@@ -9,7 +9,40 @@ namespace ModelBindingPractice.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
+        private List<Person> personData = new List<Person>
+        {
+           new Person { PersonId=1, FirstName="adam", LastName="sandler", Role = Role.Admin },
+           new Person { PersonId=2, FirstName="mark", LastName="ruffelo", Role = Role.Guest },
+           new Person { PersonId=3, FirstName="kit", LastName="harrington", Role = Role.User }
+        };
+
+        public ActionResult Index(int? id)
+        {
+            Person found = null;
+            if (id.HasValue)
+            {
+                var list = personData.Where(p => p.PersonId == id.Value);
+                if (list != null && list.Count() > 0)
+                {
+                    found = list.First();
+                }
+            }
+            return this.View(found);
+        }
+        public ActionResult CreatePerson()
+        {
+            return this.View(new Person());
+        }
+        [HttpPost]
+        public ActionResult CreatePerson(Person model)
+        {
+            return this.View("Index", model);
+        }
+        public ActionResult AddressSummaryView(
+            [Bind(Prefix ="HomeAddress", Exclude ="Country,City")]AddressSummary summary)
+        {
+            return View(summary);
+        }
         //public ActionResult ShowNames(IList<string> names)
         public ActionResult ShowNames(string[] names)
         {
@@ -23,9 +56,21 @@ namespace ModelBindingPractice.Controllers
             return View(names);
         }
 
-        public ActionResult Addresses(IList<AddressSummary> addresses)
+        //public ActionResult Addresses(IList<AddressSummary> addresses)
+        //{
+        //    addresses = addresses ?? new List<AddressSummary>();
+        //    return View(addresses);
+        //}
+        //public ActionResult Addresses()
+        //{           
+        //    IList<AddressSummary> addresses = new List<AddressSummary>();
+        //    this.UpdateModel<IList<AddressSummary>>(addresses, new FormValueProvider(this.ControllerContext));
+        //    return View(addresses);
+        //}
+        public ActionResult Addresses(FormCollection formCollection)
         {
-            addresses = addresses ?? new List<AddressSummary>();
+            IList<AddressSummary> addresses = new List<AddressSummary>();
+            this.UpdateModel<IList<AddressSummary>>(addresses, formCollection);
             return View(addresses);
         }
     }

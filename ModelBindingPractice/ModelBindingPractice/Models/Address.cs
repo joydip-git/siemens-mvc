@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 
 namespace ModelBindingPractice.Models
 {
-    //[Bind(Include ="City")]
-    public class AddressSummary
+    public class Address
     {
+        public int HouseNo { get; set; }
+        public string BuildingName { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
     }
