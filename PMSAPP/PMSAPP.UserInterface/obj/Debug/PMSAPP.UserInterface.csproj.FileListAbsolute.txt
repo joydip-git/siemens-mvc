@@ -82,3 +82,6 @@ E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\Unity.Mvc5.dl
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\System.Runtime.CompilerServices.Unsafe.xml
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\Unity.Abstractions.pdb
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\Unity.Container.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\EntityFramework.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\PMSAPP.Repository.dll.config
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\EntityFramework.xml

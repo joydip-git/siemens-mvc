@@ -1,4 +1,4 @@
-﻿using PMSAPP.Entities;
+﻿//using PMSAPP.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace PMSAPP.Repository
 {
+    /*
     public static class DataRepository
     {
         static HashSet<Category> categories;
@@ -37,4 +38,5 @@ namespace PMSAPP.Repository
         }
 
     }
+    */
 }

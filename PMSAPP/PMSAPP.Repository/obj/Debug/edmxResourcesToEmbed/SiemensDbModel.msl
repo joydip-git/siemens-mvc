@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="siemens_dbModelStoreContainer" CdmEntityContainer="siemens_dbEntities">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="siemens_dbModel.category">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="categorynme" ColumnName="categorynme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="siemens_dbModel.product">
+        <MappingFragment StoreEntitySet="products">
+          <ScalarProperty Name="productid" ColumnName="productid" />
+          <ScalarProperty Name="productname" ColumnName="productname" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

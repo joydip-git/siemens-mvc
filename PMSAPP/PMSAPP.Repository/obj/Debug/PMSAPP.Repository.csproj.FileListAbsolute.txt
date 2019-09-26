@@ -1,9 +1,12 @@
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\bin\Debug\PMSAPP.Repository.dll
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\bin\Debug\PMSAPP.Repository.pdb
-E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\bin\Debug\PMSAPP.Entities.dll
-E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\bin\Debug\PMSAPP.Entities.pdb
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\obj\Debug\PMSAPP.Repository.csprojAssemblyReference.cache
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\obj\Debug\PMSAPP.Repository.csproj.CoreCompileInputs.cache
-E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\obj\Debug\PMSAPP.Repository.csproj.CopyComplete
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\obj\Debug\PMSAPP.Repository.dll
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\obj\Debug\PMSAPP.Repository.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\bin\Debug\PMSAPP.Repository.dll.config
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\bin\Debug\EntityFramework.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\bin\Debug\EntityFramework.SqlServer.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\bin\Debug\EntityFramework.xml
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\bin\Debug\EntityFramework.SqlServer.xml
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Repository\obj\Debug\PMSAPP.Repository.csproj.CopyComplete

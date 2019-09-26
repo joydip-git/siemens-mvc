@@ -9,3 +9,8 @@ E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\obj\Debug\PMSAP
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\obj\Debug\PMSAPP.DataAccessLayer.csproj.CopyComplete
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\obj\Debug\PMSAPP.DataAccessLayer.dll
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\obj\Debug\PMSAPP.DataAccessLayer.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\bin\Debug\EntityFramework.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\bin\Debug\PMSAPP.Repository.dll.config
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\bin\Debug\EntityFramework.xml
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml

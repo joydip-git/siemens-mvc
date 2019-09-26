@@ -17,3 +17,6 @@ E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\Un
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\Unity.Abstractions.pdb
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\Unity.Container.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\EntityFramework.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\PMSAPP.Repository.dll.config
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.BusinessLogicLayer\bin\Debug\EntityFramework.xml
