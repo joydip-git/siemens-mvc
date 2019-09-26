@@ -48,7 +48,9 @@ namespace PMSAPP.DataAccessLayer.Implementation
             {
                 using (var db = new siemens_dbEntities())
                 {
-                    products = db.products.Select(
+                    products = db.products
+                        .ToList<product>()
+                        .Select(
                         poco => MapPocoProductToDTOProduct(poco));
                 }
                 return products;
