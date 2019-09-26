@@ -8,7 +8,8 @@ namespace PMSAPP.UserInterface.Models
 {
     public class ShowProductsViewModel
     {
-        public string SearchText { get; set; }
+        public string FilterText { get; set; }
         public IEnumerable<Product> Products { get; set; }
+        public List<string> Properties { get; set; }
     }
 }

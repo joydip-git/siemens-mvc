@@ -15,7 +15,7 @@ namespace PMSAPP.UserInterface.Controllers
         {
             this.dataFetcher = dataFetcher;
         }
-        // GET: Products
+
         public ActionResult Index()
         {
             return View();
@@ -24,33 +24,52 @@ namespace PMSAPP.UserInterface.Controllers
         [HttpGet]
         public ViewResult ShowProducts()
         {
-            return this.View();
-        }
-        [HttpPost]
-        //public ViewResult ShowProducts(string productName)
-        public ViewResult ShowProducts(ShowProductsViewModel vm)
-        {
-            IEnumerable<Product> products = null;
-            if (vm.SearchText != null)
+            try
             {
-                products = dataFetcher
-                    .GetAllRecords()
-                    .Where(p => p.ProductName.Contains(vm.SearchText));
+                var products = dataFetcher.GetAllRecords();
+                return this.View(new ShowProductsViewModel
+                {
+                    FilterText = "",
+                    Products = products,
+                    Properties =
+                    GetProductProperties()
+                });
             }
+            catch (Exception ex)
+            {
+                return this.View(new ShowProductsViewModel
+                {
+                    FilterText = "",
+                    Properties =
+                    GetProductProperties()
+                });
+            }
+        }
 
-            if (products != null && products.Count() > 0)
-            {
-                //this.ViewBag.Count = products.Count();
-                //return this.View(products);
-                vm.Products = products;
-                return this.View(vm);
-            }
-            else
-            {
-                //this.ViewBag.ErrorMessage = "No products found";
-                return this.View(vm);
-            }
+        private static List<string> GetProductProperties()
+        {
+            return typeof(Product)
+                                .GetProperties()
+                                .Select(pi => pi.Name)
+                                .ToList<string>();
         }
+
+        [HttpPost]
+        public ViewResult ShowProducts(
+           [Bind(Exclude = "Products")] ShowProductsViewModel vm)
+        {
+            //IEnumerable<Product> products = null;
+            if (!string.IsNullOrEmpty(vm.FilterText))
+            {
+                vm.Products =
+                    dataFetcher
+                    .GetAllRecords()
+                    .Where(p =>
+                    p.ProductName.Contains(vm.FilterText));
+            }
+            return this.View(vm);
+        }
+
         [HttpGet]
         public ViewResult AddProduct()
         {
@@ -60,12 +79,31 @@ namespace PMSAPP.UserInterface.Controllers
         //public ViewResult AddProduct(FormCollection formCollection)
         public ViewResult AddProduct(Product product)
         {
-            return this.View();
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var status = dataFetcher.AddData(product);
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            return View();
         }
 
         public ViewResult GetProduct()
         {
             return this.View(new Product { ProductName = "NA", ProductId = 0, CategoryId = 0, Description = "NA", Price = 0 });
+        }
+
+        public ActionResult DeleteProduct(int? id)
+        {
+            return this.RedirectToAction("ShowProducts");
+        }
+        public ActionResult UpdateProduct(int? id)
+        {
+            return this.RedirectToAction("ShowProducts");
         }
     }
 }

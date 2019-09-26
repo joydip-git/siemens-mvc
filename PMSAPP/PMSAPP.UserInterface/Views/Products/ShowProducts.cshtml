@@ -1,6 +1,5 @@
 ﻿@using PMSAPP.Entities
 @using System.Collections.Generic
-@*@model IEnumerable<Product>*@
 @model PMSAPP.UserInterface.Models.ShowProductsViewModel
 @{
     ViewBag.Title = "ShowProducts";
@@ -8,71 +7,89 @@
 
 <h2>Show All Products</h2>
 
-@*<span>@this.ViewBag.Data</span>*@
-@*<span>@this.ViewData["Data"]</span>*@
-
-@*{
-        var products = this.ViewData["Data"] as IEnumerable<Product>;
-    }*@
-
-
-
 @using (this.Html.BeginForm("ShowProducts", "Products", FormMethod.Post, htmlAttributes: new { @class = "form-group" }))
 {
     <div class="container">
         <div style="float:left">
-            @*<span>Product Name: &nbsp; &nbsp;</span>
-                <input type="text" name="productName" id="txtProductName" value="" class="form-control" /> &nbsp;&nbsp;*@
-            @this.Html.LabelFor(vm => vm.SearchText)
+            @this.Html.LabelFor(vm => vm.FilterText)
             &nbsp;&nbsp;
-            @this.Html.TextBoxFor(vm => vm.SearchText)
+            @this.Html.TextBoxFor(vm => vm.FilterText)
+            &nbsp;
+            <input type="submit" name="btnFilter" id="btnSearch" value="Filter" class="btn btn-primary" />
         </div>
         <div style="float:right">
-            <input type="submit" name="btnSearch" id="btnSearch" value="Search" class="btn btn-primary" />
+            @Html.Label("Properties", "Sort By:", null)
+            &nbsp;
+            @Html.DropDownListFor(
+           vm => vm.Properties,
+           new SelectList(Model.Properties),
+           new { @class = "dropdown dropdown-menu-right" })
         </div>
     </div>
-}
 
+}
 @{
-    //IEnumerable<Product> products = null;
-    if (this.Model != null)
+    var viewModel = this.Model;
+    if (viewModel.Products != null && viewModel.Products.Count() > 0)
     {
-        //products = this.Model;
-        var viewModel = this.Model;
-        @*<span>@products.Count() records found</span>*@
-        if (viewModel.Products != null && viewModel.Products.Count() > 0)
-        {
-            <span>@viewModel.Products.Count() records found</span>
-            <br />
-            <div class="table-responsive">
-                <table class="table">
-                    <thead style="background-color:burlywood">
+        <span>
+            @viewModel.Products.Count() records found
+        </span>
+        <br />
+        <div class="table-responsive">
+            <table class="table">
+                <thead style="background-color:burlywood">
+                    <tr>
+                        <td>Name</td>
+                        <td>Id</td>
+                        <td>Price</td>
+                        <td>Description</td>
+                        <td>Delete</td>
+                        <td>Update</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in viewModel.Products)
+                    {
                         <tr>
-                            <td>Name</td>
-                            <td>Id</td>
-                            <td>Price</td>
-                            <td>Description</td>
+                            <td>
+                                @item.ProductName
+                            </td>
+                            <td>
+                                @item.ProductId
+                            </td>
+                            <td>
+                                @item.Price
+                            </td>
+                            <td>
+                                @item.Description
+                            </td>
+                            <td>
+                                <div class="btn btn-danger">
+                                    <span>
+                                        @Html.ActionLink("Delete", "DeleteProduct", new { id = item.ProductId })
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-alert">
+                                        @Html.ActionLink("Update", "UpdateProduct", new { id = item.ProductId })
+                                    </span>
+                                </div>
+
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in viewModel.Products)
-                        {
-                            <tr>
-                                <td>@item.ProductName</td>
-                                <td>@item.ProductId</td>
-                                <td>@item.Price</td>
-                                <td>@item.Description</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-        }
-        else
-        {
-            <span>No products found</span>
-        }
+                    }
+                </tbody>
+            </table>
+        </div>
     }
+    else
+    {
+        <span>No products found</span>
+    }
+
 }
 
 
