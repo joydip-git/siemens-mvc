@@ -6,9 +6,15 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace PMSAPP.ServiceLayer.Controllers
 {
+    [EnableCors(
+        origins: "http://localhost:51467/",
+        headers:"*",
+        methods:"GET,POST,PUT,DELETE")]
+    [RoutePrefix("api/Products")]
     public class ProductsController : ApiController
     {
         private readonly IBusinessComponent<Product> businessComponent;
@@ -18,6 +24,8 @@ namespace PMSAPP.ServiceLayer.Controllers
             this.businessComponent = businessComponent;
         }
 
+        [Route("")]
+        [HttpGet]
         public IHttpActionResult GetProducts()
         {
             try
@@ -34,6 +42,8 @@ namespace PMSAPP.ServiceLayer.Controllers
             }
         }
 
+        [Route("{id}")]
+        [HttpGet]
         public IHttpActionResult GetProduct(
             [FromUri]int? id)
         {
@@ -50,6 +60,8 @@ namespace PMSAPP.ServiceLayer.Controllers
             }
         }
 
+        [Route("add")]
+        [HttpPost]
         public IHttpActionResult AddProduct(
             [FromBody]Product product)
         {
@@ -64,6 +76,8 @@ namespace PMSAPP.ServiceLayer.Controllers
             }
         }
 
+        [Route("update")]
+        [HttpPut]
         public IHttpActionResult UpdateProduct([FromBody]Product product)
         {
             try
@@ -77,6 +91,8 @@ namespace PMSAPP.ServiceLayer.Controllers
             }
         }
 
+        [Route("{id}")]
+        [HttpDelete]
         public IHttpActionResult RemoveProduct(int? id)
         {
             try

@@ -183,3 +183,6 @@ E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.ServiceLayer\bin\Unity.AspNet.W
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.ServiceLayer\bin\WebActivatorEx.dll
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.ServiceLayer\bin\System.Threading.Tasks.Extensions.xml
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.ServiceLayer\bin\Unity.AspNet.WebApi.pdb
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.ServiceLayer\bin\System.Web.Cors.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.ServiceLayer\bin\System.Web.Http.Cors.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.ServiceLayer\bin\System.Web.Http.Cors.xml
