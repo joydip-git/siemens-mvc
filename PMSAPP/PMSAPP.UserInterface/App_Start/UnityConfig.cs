@@ -23,14 +23,20 @@ namespace PMSAPP.UserInterface
             //container.RegisterType<
             //    IDataFetcher<Product>, DataFetcher>(
             //    new ContainerControlledLifetimeManager());
-            container.RegisterType<
-                IDataFetcher<Product>, DataFetcher>();
 
-            container.RegisterType<
-                IBusinessComponent<Product>, ProductBusinessComponent>();
+            //container.RegisterType<
+            //    IDataFetcher<Product>, DataFetcher>();
 
-            container.
-                AddNewExtension<DependencyExtension>();
+            //need DI for async versions of the class objects
+            container.RegisterType<
+                IDataFetcherAsync<Product>, DataFetcherAsync>();
+
+            //since API is being used, this segment is commented
+            //container.RegisterType<
+            //    IBusinessComponent<Product>, ProductBusinessComponent>();
+
+            //container.
+            //    AddNewExtension<DependencyExtension>();
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

@@ -85,5 +85,5 @@ E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\Unity.Contain
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\EntityFramework.dll
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\PMSAPP.Repository.dll.config
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\EntityFramework.xml
-E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\EntityFramework.SqlServer.dll
-E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\EntityFramework.SqlServer.xml
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\Newtonsoft.Json.dll
+E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.UserInterface\bin\Newtonsoft.Json.xml

@@ -10,12 +10,13 @@ namespace PMSAPP.UserInterface.Controllers
 {
     public class ProductsController : Controller
     {
+        //change the code:
+        //old: DI for synchronous classes
         private readonly IDataFetcher<Product> dataFetcher;
         public ProductsController(IDataFetcher<Product> dataFetcher)
         {
             this.dataFetcher = dataFetcher;
         }
-
         public ActionResult Index()
         {
             return View();

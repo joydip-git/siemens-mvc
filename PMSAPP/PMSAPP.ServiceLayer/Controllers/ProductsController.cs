@@ -10,6 +10,9 @@ using System.Web.Http.Cors;
 
 namespace PMSAPP.ServiceLayer.Controllers
 {
+    /// <summary>
+    /// APIs to intercat with Product data
+    /// </summary>
     [EnableCors(
         origins: "http://localhost:51467/",
         headers:"*",
@@ -19,12 +22,20 @@ namespace PMSAPP.ServiceLayer.Controllers
     {
         private readonly IBusinessComponent<Product> businessComponent;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="businessComponent"></param>
         public ProductsController(IBusinessComponent<Product> businessComponent)
         {
             this.businessComponent = businessComponent;
         }
 
-        [Route("")]
+        /// <summary>
+        /// API to return all the product records
+        /// </summary>
+        /// <returns></returns>
+        [Route("getall")]
         [HttpGet]
         public IHttpActionResult GetProducts()
         {
@@ -42,7 +53,11 @@ namespace PMSAPP.ServiceLayer.Controllers
             }
         }
 
-        [Route("{id}")]
+        /// <summary>
+        /// API to return a single product record provided product id has been supplied
+        /// </summary>
+        /// <returns></returns>
+        [Route("get/{id}")]
         [HttpGet]
         public IHttpActionResult GetProduct(
             [FromUri]int? id)
@@ -60,6 +75,10 @@ namespace PMSAPP.ServiceLayer.Controllers
             }
         }
 
+        /// <summary>
+        /// API to return add a product record
+        /// </summary>
+        /// <returns></returns>
         [Route("add")]
         [HttpPost]
         public IHttpActionResult AddProduct(
@@ -76,6 +95,10 @@ namespace PMSAPP.ServiceLayer.Controllers
             }
         }
 
+        /// <summary>
+        /// API to return update a product record
+        /// </summary>
+        /// <returns></returns>
         [Route("update")]
         [HttpPut]
         public IHttpActionResult UpdateProduct([FromBody]Product product)
@@ -91,6 +114,10 @@ namespace PMSAPP.ServiceLayer.Controllers
             }
         }
 
+        /// <summary>
+        /// API to delete a product record
+        /// </summary>
+        /// <returns></returns>
         [Route("{id}")]
         [HttpDelete]
         public IHttpActionResult RemoveProduct(int? id)

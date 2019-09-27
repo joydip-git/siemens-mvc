@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PMSAPP.UserInterface.Models
 {
@@ -12,5 +10,13 @@ namespace PMSAPP.UserInterface.Models
         int AddData(T data);
         int RemoveData(int id);
         int updateData(T data);
+    }
+    public interface IDataFetcherAsync<T> where T : class
+    {
+        Task<T> GetData(int id);
+        Task<IEnumerable<T>> GetAllRecords();
+        Task<int> AddData(T data);
+        Task<int> RemoveData(int id);
+        Task<int> UpdateData(T data);
     }
 }
