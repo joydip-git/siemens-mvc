@@ -3,6 +3,7 @@ using PMSAPP.UserInterface.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -12,8 +13,13 @@ namespace PMSAPP.UserInterface.Controllers
     {
         //change the code:
         //old: DI for synchronous classes
-        private readonly IDataFetcher<Product> dataFetcher;
-        public ProductsController(IDataFetcher<Product> dataFetcher)
+        //private readonly IDataFetcher<Product> dataFetcher;
+        //public ProductsController(IDataFetcher<Product> dataFetcher)
+        //{
+        //    this.dataFetcher = dataFetcher;
+        //}
+        private readonly IDataFetcherAsync<Product> dataFetcher;
+        public ProductsController(IDataFetcherAsync<Product> dataFetcher)
         {
             this.dataFetcher = dataFetcher;
         }
@@ -23,11 +29,13 @@ namespace PMSAPP.UserInterface.Controllers
         }
 
         [HttpGet]
-        public ViewResult ShowProducts()
+        //public ViewResult ShowProducts()
+        public async Task<ViewResult> ShowProducts()
         {
             try
             {
-                var products = dataFetcher.GetAllRecords();
+                var products = await dataFetcher.GetAllRecords();
+                //var products = dataFetcher.GetAllRecords();
                 return this.View(new ShowProductsViewModel
                 {
                     FilterText = "",
@@ -59,6 +67,7 @@ namespace PMSAPP.UserInterface.Controllers
         public ViewResult ShowProducts(
            [Bind(Exclude = "Products")] ShowProductsViewModel vm)
         {
+            /*
             //IEnumerable<Product> products = null;
             if (!string.IsNullOrEmpty(vm.FilterText))
             {
@@ -68,7 +77,9 @@ namespace PMSAPP.UserInterface.Controllers
                     .Where(p =>
                     p.ProductName.Contains(vm.FilterText));
             }
+            */
             return this.View(vm);
+            
         }
 
         [HttpGet]

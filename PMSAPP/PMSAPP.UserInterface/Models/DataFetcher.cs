@@ -1,5 +1,5 @@
-﻿using PMSAPP.BusinessLogicLayer.Abstract;
-using PMSAPP.BusinessLogicLayer.Implementation;
+﻿//using PMSAPP.BusinessLogicLayer.Abstract;
+//using PMSAPP.BusinessLogicLayer.Implementation;
 using PMSAPP.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,9 +10,11 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web;
 using Newtonsoft.Json;
+using System.Net.Http.Formatting;
 
 namespace PMSAPP.UserInterface.Models
 {
+    /*
     public class DataFetcher : IDataFetcher<Product>
     {
         private readonly IBusinessComponent<Product> businessComponent;
@@ -80,7 +82,7 @@ namespace PMSAPP.UserInterface.Models
             }
         }
     }
-
+    */
     public class DataFetcherAsync : IDataFetcherAsync<Product>
     {
         private string GetBaseUrl()
@@ -105,7 +107,7 @@ namespace PMSAPP.UserInterface.Models
             try
             {
                 string baseUrl = GetBaseUrl();
-                if (string.IsNullOrEmpty(baseUrl))
+                if (!string.IsNullOrEmpty(baseUrl))
                 {
                     using (HttpClient client = new HttpClient())
                     {
@@ -119,7 +121,10 @@ namespace PMSAPP.UserInterface.Models
                             .Accept
                             .Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                        Task<HttpResponseMessage> response = client.GetAsync("getall");
+                        Task<HttpResponseMessage> response
+                            =
+                            client.GetAsync("getall");
+
                         var responseData = await response;
                         if (responseData.IsSuccessStatusCode)
                         {
