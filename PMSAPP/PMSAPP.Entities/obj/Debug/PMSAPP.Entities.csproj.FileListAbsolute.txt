@@ -6,7 +6,6 @@ E:\Siemens\MVCTraining\PMSAPP\PMSAPP.Entities\obj\Debug\PMSAPP.Entities.dll
 E:\Siemens\MVCTraining\PMSAPP\PMSAPP.Entities\obj\Debug\PMSAPP.Entities.pdb
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Entities\bin\Debug\PMSAPP.Entities.dll
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Entities\bin\Debug\PMSAPP.Entities.pdb
-E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Entities\obj\Debug\PMSAPP.Entities.csprojAssemblyReference.cache
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Entities\obj\Debug\PMSAPP.Entities.csproj.CoreCompileInputs.cache
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Entities\obj\Debug\PMSAPP.Entities.dll
 E:\Siemens\MVCTraining\siemens-mvc\PMSAPP\PMSAPP.Entities\obj\Debug\PMSAPP.Entities.pdb
